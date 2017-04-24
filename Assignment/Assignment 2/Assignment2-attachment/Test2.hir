@@ -1,0 +1,29 @@
+# Recursive Factorial in HIR
+
+str "Input n: "
+str "! = "
+
+entry main, 0
+
+func fact
+funci 1, 1
+	jneq %0_n, 0, ~0
+	retf fact, 1
+	~0:
+	sub &0, %0_n, 1
+	arg &0, 0
+	callf @0_f, fact, 1
+	mult &0, @0_f, %0_n
+	retf fact, &0
+efunc fact
+
+func main
+funci 1, 1
+	write ?0
+	read @0_n
+	write @0_n
+	write ?1
+	arg @0_n, 0
+	callf &0, fact, 1
+	write &0
+efunc main

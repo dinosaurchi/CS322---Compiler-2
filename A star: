@@ -1,0 +1,38 @@
+A star:
+	input: a graph structure, inlcudes
+		list of edge 
+		list of node 
+	output: a list of edge
+
+class Project {
+	Render render; 
+	Algorithm alg; 
+
+	def init (G, alg) {
+		self.alg = alg
+	}
+
+	def calculate(start, end) {
+		if (!checkValidality(G, start, end))
+			return error; 
+
+		return alg.execute(G,start, end)
+	}
+
+	def execute(start, end) {
+		result = self.calculate(start, end); 
+		render.rending(result); 
+	}
+
+}
+
+interface class Algorithm {
+	def execute(G, start, end);
+}
+
+class Astar (Algorithm){
+	def execute(G, start, end) {
+		
+	}
+}
+

@@ -1,0 +1,8 @@
+# Hello World in HIR
+
+entry main, 1
+
+func main
+funci 0, 0
+	write $0_a
+efunc main

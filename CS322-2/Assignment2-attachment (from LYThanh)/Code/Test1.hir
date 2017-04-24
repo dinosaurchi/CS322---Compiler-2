@@ -1,0 +1,10 @@
+# Hello World in HIR
+
+str "Hello World!\n"
+
+entry main, 0
+
+func main
+funci 0, 0
+	write ?0
+efunc main

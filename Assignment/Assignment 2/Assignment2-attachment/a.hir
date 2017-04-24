@@ -1,0 +1,64 @@
+str "n = "
+str "\n"
+str "sum = "
+
+entry main, 0
+
+func add
+funci 0, 1
+    add &0, %0, %1
+    retf add, &0
+efunc add
+
+func double
+funci 0, 1
+    mult &0, %0, 2
+    retf double, &0
+efunc double
+
+func main
+funci 4, 4
+    write ?0
+    ~3:
+    read @0
+    ~4:
+    move @2, 0
+    ~5:
+    move @1, 1
+    ~7:
+    lte &0, @1, @0
+    jt &0, ~8
+    jump ~6
+    ~8:
+    mod &0, @1, 2
+    eq &1, &0, 0
+    jt &1, ~11
+    jump ~12
+    ~11:
+    sub &0, 0, @1
+    move @3, &0
+    jump ~10
+    ~12:
+    move @3, @1
+    ~10:
+    write @3
+    ~13:
+    write ?1
+    ~14:
+    arg @3, 0
+    callf &2, double, 1
+    arg @2, 0
+    arg &2, 1
+    callf &3, add, 2
+    move @2, &3
+    ~9:
+    add &1, @1, 1
+    move @1, &1
+    jump ~7
+    ~6:
+    write ?2
+    ~15:
+    write @2
+    ~16:
+    write ?1
+efunc main

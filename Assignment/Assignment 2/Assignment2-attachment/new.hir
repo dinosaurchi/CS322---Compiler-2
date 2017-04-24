@@ -1,0 +1,16 @@
+
+entry main, 0
+
+func main
+funci 1, 3
+    move @0, 2
+    ~1:
+    add &0, 10, 2
+    mult &1, &0, @0
+    move @0, &1
+    ~2:
+    sub &2, @0, 2
+    move @0, &2
+    ~3:
+    write @0
+efunc main

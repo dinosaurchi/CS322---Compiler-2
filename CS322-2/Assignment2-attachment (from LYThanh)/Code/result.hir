@@ -1,0 +1,20 @@
+
+entry main, 0
+
+func main
+funci 3, 2
+    move @1, 1
+    ~1:
+    move @0, 1
+    ~2:
+    lte &0, @0, @2
+    jt &0, ~3
+    jump ~0
+    ~3:
+    mult &1, @1, @0
+    move @1, &1
+    ~4:
+    add &1, @0, 1
+    move @0, &1
+    jump ~2
+efunc main

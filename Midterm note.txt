@@ -1,0 +1,44 @@
+Semantic-analysis is)the)discovery)of)meaning in)a) program,)using)contextual)knowledge
+
+The)analysis)of)syntactic)structure)requires)local)information.) It’s)called)context4free- analysis
+
+Semantic-analysis examines)program)units)at)a)deeper) level)than)contextLfree)syntax,)using)nonLlocal) information
+– It’s)called)context4sensitive- analysis
+
+To)perform)type-checking
+– A)compiler)needs)to)assign)a)type-expression to)each)
+component)of)the)source)program,)and)then)...
+– ...))determines)that)these)type)expressions)satisfy)a)set)of)
+logical)rules)that)is)called)type-system
+
+
+There)are)two)techniques)for)semantic)analyzing:
+– Attribute(grammars:)The)CFGs)to)which)have)been)added)
+attributes and)attribute-computation-rules
+– (Ad)hoc))Syntax1directed(translation:)Use)semantic-actions which)have)been)attached)to)productions)to)perform)semantic) checking
+
+
+• AGs)are)a)formal)approach)to)both)describing)and) checking)the)syntax)and)static) semantics)of)languages
+• SDT has)always)been)a)part)of)the)development)of)real) compilers
+
+
+Type Expression: 
+A)type-expression describes)the)type of)a)language) construct
+	BASIS
+	INDUCTION
+
+Record:)
+Let)T1,)T2,)...,)Tn be)the)type)expressions)of)the)individual)fields The)type)expression)describing)record)type)is:
+	record(T1 × T2 × ...)×Tn)
+
+
+There)are)two)principal)ways)of)defining)type- equivalence
+– Structural-equivalence:)Two)types)are)the)same)iffthey)consist) of)the)same) components,)put)together)in)the)same) way
+– Name-equivalence:)Two)types)are)equivalent)iff they)have)the) same)name
+
+
+A basic block (BB) is the simplest unit of control flow. It’s a maximal-length sequence of branch-free instructions
+
+
+Aninstructionisaleaderif – It is the first instruction, or
+– It has a label that is, potentially, the target of some branch, or – It immediately follows a branch
